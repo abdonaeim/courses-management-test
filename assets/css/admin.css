@@ -1,0 +1,715 @@
+/**
+ * Courses Management - Admin Styles
+ */
+
+/* ========================================
+   General Layout
+======================================== */
+.cm-wrap {
+    padding: 20px;
+    max-width: 1400px;
+}
+
+.cm-wrap h1 {
+    margin-bottom: 30px;
+}
+
+.cm-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.cm-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    min-width: 300px;
+}
+
+.cm-card h2,
+.cm-card h3 {
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cm-card-wide {
+    flex: 1;
+    min-width: 500px;
+}
+
+/* ========================================
+   Stats Cards
+======================================== */
+.cm-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cm-stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.cm-stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cm-stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cm-stat-icon .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+
+.cm-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1e1e;
+    line-height: 1;
+}
+
+.cm-stat-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* ========================================
+   Quick Actions
+======================================== */
+.cm-quick-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.cm-quick-actions .button-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cm-quick-actions .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ========================================
+   Form Elements
+======================================== */
+.cm-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.cm-select:focus {
+    border-color: #2271b1;
+    outline: none;
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+.cm-field {
+    margin-bottom: 15px;
+}
+
+.cm-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #1e1e1e;
+}
+
+.cm-field input,
+.cm-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.cm-field input:focus,
+.cm-field textarea:focus {
+    border-color: #2271b1;
+    outline: none;
+}
+
+/* ========================================
+   Metabox: Course Settings
+======================================== */
+.cm-metabox {
+    padding: 10px 0;
+}
+
+.cm-field-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* ========================================
+   Metabox: Sessions
+======================================== */
+.cm-sessions-wrapper {
+    padding: 10px 0;
+}
+
+.cm-sessions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cm-sessions-count {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.cm-sessions-actions-top {
+    display: flex;
+    gap: 8px;
+}
+
+.cm-sessions-list {
+    margin-bottom: 20px;
+}
+
+.cm-session-item {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.cm-session-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cm-session-item.ui-sortable-helper {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.cm-session-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.cm-session-drag {
+    cursor: grab;
+    color: #999;
+    padding: 5px;
+}
+
+.cm-session-drag:active {
+    cursor: grabbing;
+}
+
+.cm-session-drag .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.cm-session-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.cm-session-title-input {
+    flex: 1;
+    border: none !important;
+    background: transparent !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    padding: 8px 0 !important;
+}
+
+.cm-session-title-input:focus {
+    outline: none;
+    background: #f0f0f0 !important;
+    border-radius: 4px;
+    padding: 8px 10px !important;
+}
+
+.cm-session-toggle {
+    color: #999;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cm-session-item.collapsed .cm-session-toggle {
+    transform: rotate(-90deg);
+}
+
+.cm-session-delete {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.cm-session-delete:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+.cm-session-body {
+    padding: 15px 20px 20px;
+    border-top: 1px solid #eee;
+}
+
+.cm-session-item.collapsed .cm-session-body {
+    display: none;
+}
+
+.cm-session-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.cm-field-wide {
+    grid-column: span 2;
+}
+
+.cm-field-full {
+    grid-column: 1 / -1;
+}
+
+.cm-sessions-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+#cm-add-session {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cm-save-status {
+    font-size: 13px;
+    color: #666;
+}
+
+.cm-save-status.saving {
+    color: #2271b1;
+}
+
+.cm-save-status.saved {
+    color: #00a32a;
+}
+
+.cm-save-status.error {
+    color: #dc3545;
+}
+
+/* ========================================
+   Enrollments Page
+======================================== */
+.cm-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.cm-course-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cm-course-checkbox:hover {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.cm-course-checkbox.enrolled {
+    border-color: #00a32a;
+    background: #f0fdf4;
+}
+
+.cm-course-checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.cm-course-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.cm-course-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cm-course-title {
+    font-weight: 500;
+    color: #1e1e1e;
+}
+
+.cm-course-status {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #00a32a;
+    color: #fff;
+    display: none;
+}
+
+.cm-course-checkbox.enrolled .cm-course-status {
+    display: inline-block;
+}
+
+.cm-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cm-status {
+    font-size: 13px;
+}
+
+.cm-status.success {
+    color: #00a32a;
+}
+
+.cm-status.error {
+    color: #dc3545;
+}
+
+/* ========================================
+   Attendance Page
+======================================== */
+.cm-attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cm-bulk-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.cm-attendance-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.cm-att-stat {
+    text-align: center;
+}
+
+.cm-att-stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.cm-att-stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.cm-att-stat.present .cm-att-stat-value {
+    color: #00a32a;
+}
+
+.cm-att-stat.absent .cm-att-stat-value {
+    color: #dc3545;
+}
+
+/* Attendance Table */
+.cm-attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cm-attendance-table th,
+.cm-attendance-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.cm-attendance-table th {
+    background: #f9f9f9;
+    font-weight: 600;
+    font-size: 13px;
+    color: #666;
+}
+
+.cm-attendance-table tr:hover {
+    background: #f9f9f9;
+}
+
+.cm-attendance-table .cm-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cm-attendance-table .cm-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e0e0e0;
+}
+
+.cm-attendance-toggle {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.cm-attendance-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cm-attendance-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #dc3545;
+    transition: 0.3s;
+    border-radius: 26px;
+}
+
+.cm-attendance-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.cm-attendance-toggle input:checked + .slider {
+    background-color: #00a32a;
+}
+
+.cm-attendance-toggle input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* ========================================
+   Badges
+======================================== */
+.cm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cm-badge .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.cm-badge-success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.cm-badge-danger {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.cm-badge-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.cm-badge-active {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.cm-badge-inactive {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* ========================================
+   Loading States
+======================================== */
+.cm-loading-container {
+    position: relative;
+    min-height: 100px;
+}
+
+.cm-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #666;
+}
+
+.cm-loading::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 3px solid #e0e0e0;
+    border-top-color: #2271b1;
+    border-radius: 50%;
+    animation: cm-spin 0.8s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes cm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   Responsive
+======================================== */
+@media (max-width: 782px) {
+    .cm-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cm-grid {
+        flex-direction: column;
+    }
+    
+    .cm-card,
+    .cm-card-wide {
+        min-width: 100%;
+    }
+    
+    .cm-session-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .cm-field-wide,
+    .cm-field-full {
+        grid-column: 1;
+    }
+    
+    .cm-courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Admin Styles - Basic */
+.cm-session-placeholder {
+    background: #e0e0e0;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.cm-loading {
+    padding: 40px;
+    text-align: center;
+    color: #666;
+}
