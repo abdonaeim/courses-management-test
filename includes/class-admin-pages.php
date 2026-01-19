@@ -156,9 +156,7 @@ class CM_Admin_Pages {
     public function page_dashboard() {
         $stats = $this->get_dashboard_stats();
         ?>
-        <div class="wrap cm-dashboard-wrap">
-            <h1><?php _e('Courses Dashboard', 'courses-management'); ?></h1>
-            
+        <div class="wrap cm-dashboard-wrap">            
             <!-- Stats Cards -->
             <div class="cm-stats-grid">
                 <div class="cm-stat-card cm-stat-primary">
@@ -427,7 +425,7 @@ class CM_Admin_Pages {
     private function dashboard_styles() {
         ?>
         <style>
-        .cm-dashboard-wrap { padding: 20px; max-width: 1600px; }
+        .cm-dashboard-wrap { padding: 0px; max-width: 1600px; }
         
         .cm-stats-grid {
             display: grid;
