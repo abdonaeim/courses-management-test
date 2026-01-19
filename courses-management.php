@@ -3,7 +3,7 @@
  * Plugin Name: Courses Management
  * Plugin URI: https://wa.me/201020170951
  * Description: Complete course and attendance management system
- * Version: 3.0.0
+ * Version: 3.0.2
  * Author: Abdelrhman Naeim
  * Text Domain: courses-management
  * Requires at least: 5.0
