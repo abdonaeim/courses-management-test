@@ -488,7 +488,7 @@ require_once CM_PLUGIN_DIR . 'lib/plugin-update-checker-master/plugin-update-che
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $cm_update_checker = PucFactory::buildUpdateChecker(
-    'https://github.com/abdonaeim/courses-management/',
+    'https://github.com/abdonaeim/courses-management-test.git',
     CM_PLUGIN_FILE,
-    'courses-management'
+    'courses-management-test'
 );
