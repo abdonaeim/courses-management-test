@@ -3,7 +3,7 @@
  * Plugin Name: Cell Courses Management TEST
  * Plugin URI: https://wa.me/201020170951
  * Description: Complete course and attendance management system
- * Version: 3.0.7
+ * Version: 3.0.8
  * Author: Abdelrhman Naeim
  * Text Domain: courses-management
  * Requires at least: 5.0
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Plugin Constants
-define('CM_VERSION', '3.0.7');
+define('CM_VERSION', '3.0.8');
 define('CM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('CM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('CM_PLUGIN_FILE', __FILE__);
@@ -488,7 +488,11 @@ require_once CM_PLUGIN_DIR . 'lib/plugin-update-checker-master/plugin-update-che
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $cm_update_checker = PucFactory::buildUpdateChecker(
-    'https://github.com/abdonaeim/courses-management-test.git',
+    'https://github.com/abdonaeim/courses-management-test',
     CM_PLUGIN_FILE,
     'courses-management-test'
 );
+
+// IMPORTANT: GitHub branch name
+$cm_update_checker->setBranch('main');
+
