@@ -54,7 +54,6 @@ class CM_Admin_Pages {
         add_submenu_page('cm-dashboard', __('Students', 'courses-management'), __('Students', 'courses-management'), 'manage_options', 'cm-students', [$this, 'page_students']);
         add_submenu_page('cm-dashboard', __('Reports', 'courses-management'), __('Reports', 'courses-management'), 'manage_options', 'cm-reports', [$this, 'page_reports']);
     }
-    }
     
     /**
      * Get Dashboard Statistics
@@ -1111,5 +1110,6 @@ class CM_Admin_Pages {
         exit;
     }
 
+}
 
     
