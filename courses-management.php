@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Courses Management
+ * Plugin Name: Cell Courses Management TEST
  * Plugin URI: https://wa.me/201020170951
  * Description: Complete course and attendance management system
  * Version: 3.0.5

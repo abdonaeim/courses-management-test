@@ -52,6 +52,8 @@ class CM_Admin_Pages {
         add_submenu_page('cm-dashboard', __('Enrollments', 'courses-management'), __('Enrollments', 'courses-management'), 'manage_options', 'cm-enrollments', [$this, 'page_enrollments']);
         add_submenu_page('cm-dashboard', __('Attendance', 'courses-management'), __('Attendance', 'courses-management'), 'manage_options', 'cm-attendance', [$this, 'page_attendance']);
         add_submenu_page('cm-dashboard', __('Students', 'courses-management'), __('Students', 'courses-management'), 'manage_options', 'cm-students', [$this, 'page_students']);
+        add_submenu_page('cm-dashboard', __('Reports', 'courses-management'), __('Reports', 'courses-management'), 'manage_options', 'cm-reports', [$this, 'page_reports']);
+    }
     }
     
     /**
@@ -1108,4 +1110,6 @@ class CM_Admin_Pages {
         fclose($output);
         exit;
     }
-}
+
+
+    

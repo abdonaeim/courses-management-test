@@ -1,8 +1,6 @@
 <?php
-// تمنع الوصول المباشر للملف
 if (!defined('ABSPATH')) exit;
 
-// تضيف صفحة تقارير في لوحة تحكم WP
 add_action('admin_menu', function() {
     add_submenu_page(
         'courses-management',   // slug المينيو الرئيسي للبلاجن
